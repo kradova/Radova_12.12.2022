@@ -26,5 +26,11 @@ public class Main {
         comparer.compareNumbers(3, -9);
         comparer.compareNumbers(7, -5);
         comparer.compareNumbers(4, -4);
+
+        System.out.println("\n===== Task 4 =====");
+        IsoscelesTriangle triangleChecker = new IsoscelesTriangle();
+        triangleChecker.isTriangleIsoscrles(2, 3, 5);
+        triangleChecker.isTriangleIsoscrles(2, 2, 2);
+        triangleChecker.isTriangleIsoscrles(5, 7, 5);
     }
 }
