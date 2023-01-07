@@ -2,12 +2,16 @@ package homework3;
 
 public class NumberComparer {
     public void compareNumbers(int numberOne, int numberTwo){
+        System.out.println(checkMagnitude(numberOne, numberTwo));
+    }
+
+    public String checkMagnitude(int numberOne, int numberTwo){
         if (Math.abs(numberOne) > Math.abs(numberTwo)){
-            System.out.println(numberOne + " has a large magnitude");
+            return numberOne + " has a large magnitude";
         }else if (Math.abs(numberOne) < Math.abs(numberTwo)){
-            System.out.println(numberTwo + " has a large magnitude");
+            return numberTwo + " has a large magnitude";
         }else {
-            System.out.println("Numbers are equal");
+            return "Numbers are equal";
         }
     }
 }
