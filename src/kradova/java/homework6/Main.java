@@ -11,5 +11,11 @@ public class Main {
 
         Person person_3 = new Person("Sherlock ", "Holmes ", "London", "37742123513");
         System.out.println(person_3.call());
+
+        System.out.println(person_1.call(person_2));
+        System.out.println(person_1.call(person_1));
+
+        Person person_4 = new Person("Will", "Smith", "New York", "2936729462846");
+        System.out.println(person_1.call(person_4));
     }
 }
