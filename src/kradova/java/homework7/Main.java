@@ -13,13 +13,19 @@ public class Main {
 
         try {
             sportsman_1.leaveCoach(coach);
-        } catch (Exception e) {
+        } catch (NonExistedCoachException e) {
             System.out.println(e.getMessage());
         }
 
         try {
             sportsman_1.leaveCoach(new Coach("Error coach", "????????"));
-        } catch (Exception e) {
+        } catch (NonExistedCoachException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            coach.removeSportsmen(4);
+        } catch (IndexOutOfBoundsException e) {
             System.out.println(e.getMessage());
         }
     }

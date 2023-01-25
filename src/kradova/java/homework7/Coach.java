@@ -15,4 +15,9 @@ public class Coach extends Person {
         sportsmans.add(sportsman);
         logger.log("Coach " + this.getName() + " added sportsman " + sportsman.getName(), LogLevel.INFO);
     }
+
+    public void removeSportsmen(int sportsman) {
+        logger.log("Coach " + this.getName() + " try remove sportsman" + sportsman, LogLevel.WARN);
+        this.sportsmans.remove(sportsman);
+    }
 }

@@ -7,14 +7,14 @@ public class Sportsman extends Person {
         super(name, phone);
     }
 
-    public void leaveCoach(Coach coach) throws Exception {
+    public void leaveCoach(Coach coach) throws NonExistedCoachException {
         if (coach.sportsmans.contains(this)) {
             coach.sportsmans.remove(this);
             logger.log("Sportsman " + this.getName() + " leaved coach " + coach.getName(), LogLevel.WARN);
         } else {
             String msg = "Error: Sportsman " + this.getName() + " tries to leave a non-existent coach " + coach.getName();
             logger.log(msg, LogLevel.ERROR);
-            throw new Exception(msg);
+            throw new NonExistedCoachException(msg);
         }
     }
 }
