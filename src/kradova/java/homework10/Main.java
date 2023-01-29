@@ -14,8 +14,7 @@ public class Main {
 
         printWordsStartedByA(fruits);
         printFruitLength(fruits);
-        printSumOfLetters1(fruits);
-        printSumOfLetters2(fruits);
+        printSumOfLetters(fruits);
     }
 
     public static void printWordsStartedByA(List<String> fruits) {
@@ -24,17 +23,11 @@ public class Main {
     }
 
     public static void printFruitLength(List<String> fruits) {
-        System.out.println("\nPrint fruits with length equals 4");
-        fruits.stream().filter(fruit -> fruit.length() == 4).forEach(System.out::println);
+        System.out.println("\nPrint fruits with length greater than 4");
+        fruits.stream().filter(fruit -> fruit.length() > 4).forEach(System.out::println);
     }
 
-    public static void printSumOfLetters1(List<String> fruits) {
-        System.out.println("\nPrint the sum of the three first fruits");
-        var result = fruits.stream().limit(3).reduce((f1, f2) -> f1 + f2);
-        System.out.println(result.get());
-    }
-
-    public static void printSumOfLetters2(List<String> fruits) {
+    public static void printSumOfLetters(List<String> fruits) {
         System.out.println("\nPrint the sum of the letters of the first three fruits");
         var result = fruits.stream()
                 .limit(3)
